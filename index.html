@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan Diri - Mahasiswa Baru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-6 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <div class="relative inline-block">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg animate-float">
+                    <svg viewBox="0 0 200 200" class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500">
+                        <!-- Avatar SVG -->
+                        <circle cx="100" cy="80" r="35" fill="#FFF" opacity="0.9"/>
+                        <circle cx="85" cy="75" r="3" fill="#333"/>
+                        <circle cx="115" cy="75" r="3" fill="#333"/>
+                        <path d="M 90 85 Q 100 95 110 85" stroke="#333" stroke-width="2" fill="none"/>
+                        <path d="M 60 140 Q 100 120 140 140 Q 140 180 100 180 Q 60 180 60 140" fill="#FFF" opacity="0.9"/>
+                    </svg>
+                </div>
+                <div class="absolute -bottom-2 -right-2 bg-green-400 w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
+                    <span class="text-white text-xs">✓</span>
+                </div>
+            </div>
+            <h1 class="text-4xl font-bold text-white mb-2">R Project Solo</h1>
+            <p class="text-xl text-blue-100 mb-4">Mahasiswa Teknik Informatika</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="social-icon bg-white bg-opacity-20 p-3 rounded-full text-white hover:bg-opacity-30">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon bg-white bg-opacity-20 p-3 rounded-full text-white hover:bg-opacity-30">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon bg-white bg-opacity-20 p-3 rounded-full text-white hover:bg-opacity-30">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column -->
+            <div class="space-y-6">
+                <!-- About Me Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-2">👋</span> Tentang Saya
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Halo! Saya mahasiswa baru Teknik Informatika yang passionate dalam dunia teknologi. 
+                        Saya tertarik dengan pengembangan web, mobile app, dan artificial intelligence. 
+                        Selalu eager to learn dan siap menghadapi tantangan baru!
+                    </p>
+                </div>
+
+                <!-- Contact Info Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-2">📞</span> Kontak
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="text-blue-500 mr-3">📧</span>
+                            <span class="text-gray-600">mahasiswabaru@email.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-500 mr-3">📱</span>
+                            <span class="text-gray-600">+62 812-3456-7890</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-red-500 mr-3">📍</span>
+                            <span class="text-gray-600">Jakarta, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Column -->
+            <div class="space-y-6">
+                <!-- Education Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-2">🎓</span> Pendidikan
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">Universitas Teknologi Konoha</h4>
+                            <p class="text-blue-600 font-medium">S1 Teknik Informatika</p>
+                            <p class="text-gray-500 text-sm">2024 - Sekarang</p>
+                            <p class="text-gray-600 text-sm mt-1">IPK: 3.85/4.00</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">SMA Negeri 1 Konoha</h4>
+                            <p class="text-green-600 font-medium">IPA</p>
+                            <p class="text-gray-500 text-sm">2021 - 2024</p>
+                            <p class="text-gray-600 text-sm mt-1">Nilai UN: 92.5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-2">🎯</span> Hobi & Minat
+                    </h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-blue-50 rounded-lg p-3 text-center">
+                            <span class="text-2xl">💻</span>
+                            <p class="text-sm font-medium text-gray-700 mt-1">Coding</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-3 text-center">
+                            <span class="text-2xl">🎮</span>
+                            <p class="text-sm font-medium text-gray-700 mt-1">Gaming</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-3 text-center">
+                            <span class="text-2xl">📚</span>
+                            <p class="text-sm font-medium text-gray-700 mt-1">Reading</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-3 text-center">
+                            <span class="text-2xl">🏸</span>
+                            <p class="text-sm font-medium text-gray-700 mt-1">Badminton</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-6">
+                <!-- Skills Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-2">⚡</span> Keahlian
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">HTML/CSS</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">JavaScript</span>
+                                <span class="text-sm text-gray-500">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-yellow-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Python</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Java</span>
+                                <span class="text-sm text-gray-500">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-red-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goals Card -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-2">🚀</span> Target & Cita-cita
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-green-500 mr-2 mt-1">✓</span>
+                            <span class="text-gray-600 text-sm">Lulus dengan IPK > 3.5</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-500 mr-2 mt-1">○</span>
+                            <span class="text-gray-600 text-sm">Magang di perusahaan teknologi</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-500 mr-2 mt-1">○</span>
+                            <span class="text-gray-600 text-sm">Membuat startup sendiri</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-500 mr-2 mt-1">○</span>
+                            <span class="text-gray-600 text-sm">Menjadi Full Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fun Fact Card -->
+                <div class="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-6 shadow-lg card-hover text-white">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <span class="mr-2">🎉</span> Fun Fact
+                    </h3>
+                    <p class="text-sm opacity-90">
+                        Saya bisa menyelesaikan Rubik's Cube dalam waktu kurang dari 2 menit! 
+                        Dan saya juga koleksi 15 tanaman hias di kamar kos 🌱
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8">
+            <p class="text-white opacity-75 text-sm">
+                "The best way to predict the future is to create it" - Peter Drucker
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Animate skill bars on page load
+        window.addEventListener('load', function() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+
+        // Add click interactions to cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c748d19386b5e2',t:'MTc1NzQyNzE4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
